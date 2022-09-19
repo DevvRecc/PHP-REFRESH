@@ -27,8 +27,6 @@
     echo '€ ' . berekenNet(12.5);
     echo '<br>';
     echo '€ ' . berekenNet(12.6666);
-
-
     
     ?>
 </body>
