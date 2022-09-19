@@ -10,26 +10,24 @@
 <body>
     <?php 
     
-        $cijfers=[4,5,4,5,6,6,5,8,7,6,4,8];
+    $PHPCijfers=[4,5,4,5,6,6,5,8,7,6,4,8];
 
-        function onvoldoendes($cijfers){
-            $returnOnv=[];
-            for($i = 0; $i < count($cijfers); $i++) {
-                if ( $cijfers[$i] < 5 == 0) {
-                    $returnOnv[]=$cijfers[$i];
-                }
+    function onvoldoendes($array) {
+        $returnArray= [];
+          for($i= 0; $i < count($array); $i++){
+            if($array[$i] < 5.5){
+              $returnArray[] = $array[$i];
             }
-
-            return($returnOnv);
-        }
-
-        echo '<pre>';
-        echo '<hr>';
-        echo onvoldoendes([6,6,7]);
-        echo '<hr>';
-        echo onvoldoendes([6,3,6,7]);
-        echo '<hr>';
-        echo onvoldoendes($cijfers);
+          }
+        return($returnArray);
+      }
+      
+      echo "<pre>";
+      print_r( onvoldoendes([6,6,7]) );
+      echo '<hr>';
+      print_r( onvoldoendes([6,3,6,7]) );
+      echo '<hr>';
+      print_r( onvoldoendes($PHPCijfers) );
 
     ?>
 </body>
