@@ -20,7 +20,7 @@
     <?php 
 
         for ($i = 1; $i < 21; $i++) {
-            echo $i . ' ';
+            echo $i . '-' . ' ';
         }
 
         echo "<br>";
@@ -28,7 +28,7 @@
 
                 $c = 1;
         while ( $c < 21 ) {
-            echo $c . ' ';
+            echo $c . '-' . ' ';
             $c++;
         }
         
