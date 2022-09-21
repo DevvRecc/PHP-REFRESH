@@ -10,13 +10,27 @@
 <body>
     <?php 
     
-    function begroeting($naam){
-        $tijd = '';
-            
+
+
+    function begroeting($naam) {
+
+        $hour = date('H');
+
+        if($hour < 12){
+            echo "Goedenmorgen ".$naam;
+        }   elseif($hour < 17){
+            echo "Goedenmiddag ".$naam;
+        }   else{
+            echo "Goedenavond ".$naam;
+        }
+
     }
 
     echo begroeting("Vasco");
+    echo '<br>';
     echo begroeting("Jesse");
+    echo '<br>';
+    echo begroeting("Nadir");
 
     ?>
 </body>
