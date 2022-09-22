@@ -12,25 +12,35 @@
     
     $string = ["Voor de vormgeving is het handig om te weten hoe het eruit komt te zien voordat je daadwerkelijk tekst gaat plaatsen."];
 
-    function kleineWoorden($string){
+    function kleineWoorden($lengte, $string){
         $arrayStr = explode(" " , $string);
         $teller = 0;
 
         foreach ($arrayStr as $string){
-            if(strlen($string) < 4){
+            if(strlen($string) < $lengte){
                 $teller++;
             }
         }
     return $teller;
     }
         
-    echo kleineWoorden("dit is een voorbeeld");
+    echo kleineWoorden(4,"dit is een voorbeeld");
     echo '<hr>';
-    echo kleineWoorden("a b c d");
+    echo kleineWoorden(3,"dit is een voorbeeld");
     echo '<hr>';
-    echo kleineWoorden("abcd");
+    echo kleineWoorden(1,"dit is een voorbeeld");
     echo '<hr>';
-    echo kleineWoorden($string[0]);
+    echo kleineWoorden(0,"dit is een voorbeeld");
+    echo '<hr>';
+    echo kleineWoorden(2,"a b c d");
+    echo '<hr>';
+    echo kleineWoorden(6,"abcde");
+    echo '<hr>';
+    echo kleineWoorden(4,$string[0]);
+    echo '<hr>';
+    echo kleineWoorden(3,$string[0]);	
+    echo '<hr>';
+    echo kleineWoorden(10,$string[0]);
 
     ?>
 </body>
