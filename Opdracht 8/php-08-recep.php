@@ -10,25 +10,24 @@
 <body>
     <?php 
 
-    $array1 = [11,11,5,2,12,6,7,8,1,10,9];
+    $array = [11,11,5,2,12,6,7,8,1,10,9];
 
-        function telGroteGetallen($array1){
-            $cijfers = '';
-            for($i=0; $i > 10; $i++){
+        function telGroteGetallen($array){
+            $returnArray = [];
+            for($i=0; $i < count($array); $i++){
                 if($array[$i] > 10){
-                    $cijfers = $array[$i];
+                    $returnArray[] = $array[$i];
                 }
             }
-            return $cijfers;
-        }
-    
+            return array_sum($returnArray);
+        }    
 
         echo "<pre>";
-        echo telGroteGetallen( [10,20,20] );
+        print_r( telGroteGetallen( [10,20,20] ) );
         echo '<hr>';
-        echo telGroteGetallen( [9, 10, 11] );
+        print_r ( telGroteGetallen( [9, 10, 11] ) );
         echo '<hr>';
-        echo telGroteGetallen($array1);
+        print_r ( telGroteGetallen($array) );
     ?>
 </body>
 
