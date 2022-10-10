@@ -20,7 +20,12 @@
     <?php 
 
         for ($i = 1; $i < 21; $i++) {
-            echo $i . '-' . ' ';
+            // echo $i . ' -' . ' ';
+            if ($i >= 2){
+                echo " - {$i}";
+            }  else{
+                echo $i;
+            }
         }
 
         echo "<br>";
@@ -28,7 +33,11 @@
 
                 $c = 1;
         while ( $c < 21 ) {
-            echo $c . '-' . ' ';
+            if ($c >= 2){
+                echo " - {$c}";
+            }  else{
+                echo $c;
+            }
             $c++;
         }
         
